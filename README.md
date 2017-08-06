@@ -28,7 +28,7 @@ Tasks:
 
 Checkpoints: 
 
-Github: 
+[Github](https://github.com/ShangShungFoundation/tib_learn_app/)
 
 Project Leader: 
 
