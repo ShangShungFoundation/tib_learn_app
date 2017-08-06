@@ -1,7 +1,9 @@
 ## Tibetan Learning App
 [1st Merigar Hackathon project](ShangShungFoundation/1st_merigar_hackathon)
 
-website: 
+Website: 
+
+Project Coordinator: 
 
 Name: Tibetan Learning App
 
@@ -28,9 +30,9 @@ Tasks:
 
 Checkpoints: 
 
-[Github](https://github.com/ShangShungFoundation/tib_learn_app/)
+Github: https://github.com/ShangShungFoundation/tib_learn_app/
 
-Project Leader: 
+Issues: https://github.com/ShangShungFoundation/tib_learn_app/issues
 
 Credits: 
 * Prof. Fabian Sanders
