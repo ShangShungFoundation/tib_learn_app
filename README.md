@@ -19,6 +19,9 @@ Why they would want to use it:
 Expected Features: Multilanguage
 
 Checkpoints: 
+1. Syllabe preview with wylie and pronuciation (mp3 audio)
+2. Searchabe tib syllabes libary
+3. Tibetan phrases with syllabes hints (form syllabes libary)
 
 Technologies: [JavaScript](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics), [ES6](https://babeljs.io/learn-es2015/), [React](https://facebook.github.io/react/), [Bootstrap](http://getbootstrap.com/getting-started/)
 
