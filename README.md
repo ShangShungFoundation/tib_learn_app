@@ -32,6 +32,8 @@ Checkpoints:
 
 Github: https://github.com/ShangShungFoundation/tib_learn_app/
 
+Tasks: https://github.com/ShangShungFoundation/tib_learn_app/projects/1
+
 Issues: https://github.com/ShangShungFoundation/tib_learn_app/issues
 
 Credits: 
