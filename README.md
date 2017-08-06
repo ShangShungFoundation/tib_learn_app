@@ -1,7 +1,7 @@
 ## Tibetan Learning App
 [1st Merigar Hackathon project](ShangShungFoundation/1st_merigar_hackathon)
 
-[Website](https://shangshungfoundation.github.io/tib_learn_app/) | 
+**[Website](https://shangshungfoundation.github.io/tib_learn_app/)** | 
 [Github](https://github.com/ShangShungFoundation/tib_learn_app/) | 
 [Tasks](https://github.com/ShangShungFoundation/tib_learn_app/projects/1) | 
 [Issues](https://github.com/ShangShungFoundation/tib_learn_app/issues)
