@@ -37,4 +37,4 @@ Credits:
 * Prof. Fabian Sanders
 * Тatiana Аржакова
 
-Licence: Apache
+Licence: [MIT License](LICENCE)
