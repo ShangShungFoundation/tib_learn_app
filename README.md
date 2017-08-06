@@ -37,4 +37,4 @@ Credits:
 * Prof. Fabian Sanders
 * Тatiana Аржакова
 
-Licence: [MIT License](LICENCE)
+Licence: [MIT License](LICENSE)
