@@ -1,6 +1,8 @@
 ## Tibetan Learning App
 [1st Merigar Hackathon project](ShangShungFoundation/1st_merigar_hackathon)
 
+website: 
+
 Name: Tibetan Learning App
 
 Purpose: 
@@ -19,7 +21,8 @@ Backend: Google sheets (json)
 
 Difficulty: Medium
 
-Recommended toolset: 
+Recommended toolset:
+   - Editor: [Sublime Text 3](https://www.sublimetext.com/3) with [react support](https://medium.com/@adrianli/setting-up-sublime-text-3-for-reactjs-3bf6baceb73a), [Atom](https://atom.io/) [with react](https://medium.com/productivity-freak/my-atom-editor-setup-for-js-react-9726cd69ad20) or Vim ;)
 
 Tasks:
 
@@ -29,8 +32,8 @@ Github:
 
 Project Leader: 
 
-Further Info:
-
-Credits: Fabian Sanders, Тatiana Аржакова
+Credits: 
+* Prof. Fabian Sanders
+* Тatiana Аржакова
 
 Licence: Apache
