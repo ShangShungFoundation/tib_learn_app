@@ -15,7 +15,7 @@ Why they would want to use it:
 
 Expected Features: Multilanguage
 
-Technologies: SE6, React, Bootstrap
+Technologies: [JavaScript](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics), [ES6](https://babeljs.io/learn-es2015/), [React](https://facebook.github.io/react/), [Bootstrap](http://getbootstrap.com/getting-started/)
 
 Backend: Google sheets (json)
 
