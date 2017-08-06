@@ -45,8 +45,9 @@ Assuming that you have node.js installed globally
 ```sh
 npm install -g create-react-app
 
-create-react-app my-app
-cd my-app/
+create-react-app tib_learn_app
+cd tib_learn_app/
+git clone https://github.com/ShangShungFoundation/tib_learn_app.git .
 npm start
 
 ```
