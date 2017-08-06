@@ -1,37 +1,36 @@
-## Welcome to GitHub Pages
+## Tibetan Learning App
+[1st Merigar Hackathon project](ShangShungFoundation/1st_merigar_hackathon)
 
-You can use the [editor on GitHub](https://github.com/ShangShungFoundation/tib_learn_app/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Name: Tibetan Learning App
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Purpose: 
 
-### Markdown
+Description: 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Who it’s for: 
 
-```markdown
-Syntax highlighted code block
+Why they would want to use it:
 
-# Header 1
-## Header 2
-### Header 3
+Expected Features: Multilanguage
 
-- Bulleted
-- List
+Technologies: SE6, React, Bootstrap
 
-1. Numbered
-2. List
+Backend: Google sheets (json)
 
-**Bold** and _Italic_ and `Code` text
+Difficulty: Medium
 
-[Link](url) and ![Image](src)
-```
+Recommended toolset: 
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Tasks:
 
-### Jekyll Themes
+Checkpoints: 
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ShangShungFoundation/tib_learn_app/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Github: 
 
-### Support or Contact
+Project Leader: 
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Further Info:
+
+Credits: Fabian Sanders, Тatiana Аржакова
+
+Licence: Apache
