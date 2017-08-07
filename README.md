@@ -8,13 +8,26 @@
 
 Project Coordinator: 
 
-Purpose: 
+### Description
+An online tool to learn tibetan, mostly classical. 
+Divided into two main parts:
+	a) writing system and pronunciation (standard tibetan, common to classical and modern languages)
+	b) presentation of the grammar of classical Tibetan - grammatical syllables and their function - illustrated and clarified by examples
+		
+b) can have possible further ramifications: 	
+	1) a platform for translators and translations from classical Tibetan
+	2) a dictionary of quotations of classical Tibetan
+   
+### Purpose
+Provide a tool for self learning of Tibetan pronunciation and classical tibetan grammar. 
+Provide additional materials for students of SSF Classical Tibetan courses
+work as a reference point for people learning to translate and working with translation
 
-Description: 
+### Who it’s for? 
+Anyone interested
 
-Who it’s for: 
-
-Why they would want to use it:
+### Why they would want to use it?
+Extremely useful tool for those interested in Classical Tibetan, Tibetan Traditions, Tibetan Culture and related subjects
 
 ### Expected Features: 
 - unicode support
