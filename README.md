@@ -29,9 +29,11 @@ Why they would want to use it:
 
 [JavaScript](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics), [ES6](https://babeljs.io/learn-es2015/), [React](https://facebook.github.io/react/), [Bootstrap](http://getbootstrap.com/getting-started/), [Browserify](https://codeutopia.net/blog/2016/01/25/getting-started-with-npm-and-browserify-in-a-react-project/)
 
-Backend: Google sheets (json)
+### Backend:
+node.js, Google sheets (json export)
 
-Difficulty: Medium
+### Difficulty: 
+Medium
 
 ### Recommended toolset:
    - Editor: [Sublime Text 3](https://www.sublimetext.com/3) with [react support](https://medium.com/@adrianli/setting-up-sublime-text-3-for-reactjs-3bf6baceb73a), [Atom](https://atom.io/) [with react](https://medium.com/productivity-freak/my-atom-editor-setup-for-js-react-9726cd69ad20) or Vim ;)
