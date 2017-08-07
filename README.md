@@ -51,7 +51,7 @@ git clone https://github.com/ShangShungFoundation/tib_learn_app.git .
 npm start
 
 ```
-
+More [info](https://github.com/facebookincubator/create-react-app)
 ### Credits: 
 * Prof. Fabian Sanders (initial idea, content, supervision)
 * Daniel Simonelli
