@@ -63,7 +63,7 @@ npm install -g create-react-app
 create-react-app tib_learn_app
 cd tib_learn_app/
 git init
-rm package.json README.md .gitignore
+rm package.json README.md
 git add .
 git commit -m "First commit"
 git remote add origin https://github.com/ShangShungFoundation/tib_learn_app.git
