@@ -71,6 +71,6 @@ More [info](https://github.com/facebookincubator/create-react-app)
 * Prof. Fabian Sanders (initial idea, content, supervision)
 * Daniel Simonelli
 * Тatiana Аржакова
-* 
+* Kamil Selwa
 
 ### Licence: [MIT License](LICENSE)
