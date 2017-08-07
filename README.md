@@ -6,7 +6,7 @@
 [Tasks](https://github.com/ShangShungFoundation/tib_learn_app/projects/1) | 
 [Issues](https://github.com/ShangShungFoundation/tib_learn_app/issues)
 
-Project Coordinator: 
+### Project Coordinator: 
 
 ### Description
 An online tool to learn tibetan, mostly classical. 
@@ -17,7 +17,7 @@ Divided into two main parts:
 Can have possible further ramifications: 	
 	- a platform for translators and translations from classical Tibetan
 	- a dictionary of quotations of classical Tibetan
-   
+
 ### Purpose
 * Provide a tool for self learning of Tibetan pronunciation and classical tibetan grammar. 
 * Provide additional materials for students of SSF Classical Tibetan courses.
@@ -62,7 +62,12 @@ npm install -g create-react-app
 
 create-react-app tib_learn_app
 cd tib_learn_app/
-git clone https://github.com/ShangShungFoundation/tib_learn_app.git .
+git init
+rm package.json README.md .gitignore
+git add .
+git commit -m "First commit"
+git remote add origin https://github.com/ShangShungFoundation/tib_learn_app.git
+git pull origin master --allow-unrelated-histories
 npm start
 
 ```
