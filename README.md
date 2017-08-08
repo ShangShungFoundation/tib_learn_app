@@ -1,5 +1,5 @@
 ## [Tibetan Learning App](https://shangshungfoundation.github.io/tib_learn_app/)
-[1st Merigar Hackathon project](ShangShungFoundation/1st_merigar_hackathon)
+[1st Merigar Hackathon project](ShangShungFoundation/1st_merigar_hackathon) organized by [Shang Shung Foundation](shangshungfoundation.org)
 
 **[Website](https://shangshungfoundation.github.io/tib_learn_app/)** | 
 [Github](https://github.com/ShangShungFoundation/tib_learn_app/) | 
@@ -9,7 +9,8 @@
 ### Project Coordinator: 
 
 ### Description
-An online tool to learn tibetan, mostly classical. 
+An online tool to learn tibetan (mostly classical).
+
 Divided into two main parts:
 
 1. writing system and pronunciation (standard tibetan, common to classical and modern languages)
