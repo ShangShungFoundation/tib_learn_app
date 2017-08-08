@@ -35,9 +35,9 @@ Extremely useful tool for those interested in Classical Tibetan, Tibetan Traditi
 - Multilanguage
 
 ### Checkpoints: 
-1. Syllabe preview with wylie and pronuciation (mp3 audio)
-2. Searchabe tib syllabes libary
-3. Tibetan phrases with syllabes hints (form syllabes libary)
+- [ ] Syllabe preview with wylie and pronuciation (mp3 audio)
+- [ ] Searchabe tib syllabes libary
+- [ ] Tibetan phrases with syllabes hints (form syllabes libary)
 
 ### Technologies: 
 
