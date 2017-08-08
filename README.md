@@ -79,7 +79,9 @@ npm start
 ####  Deploy Project
 `npm run deploy`
 
-### Credits: 
+### Acknowledgements
+We are grateful to following persons for their ideas and collaboration:
+
 * Prof. Fabian Sanders (initial idea, content, supervision)
 * Daniel Simonelli
 * Тatiana Аржакова
