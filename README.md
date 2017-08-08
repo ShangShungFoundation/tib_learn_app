@@ -57,7 +57,7 @@ Medium
 * [Exporting audio using Audacity](https://docs.google.com/a/shangshunginstitute.org/document/d/1Earmi3QY5TuGw-K94hTVOaITLj6RH5MA0Kz5wRMhIKA/edit?usp=sharing)
 
 #### Bootstrap Project
-Assuming that you have node.js installed globally
+Assuming that you have node.js installed globally. More [info](https://github.com/facebookincubator/create-react-app)
 ```sh
 npm install -g create-react-app
 
@@ -72,7 +72,6 @@ git remote add origin https://github.com/ShangShungFoundation/tib_learn_app.git
 git pull origin master --allow-unrelated-histories
 npm start
 ```
-More [info](https://github.com/facebookincubator/create-react-app)
 
 ####  Start Project
 `npm start`
