@@ -56,13 +56,14 @@ Medium
 ### Resources:
 * [Exporting audio using Audacity](https://docs.google.com/a/shangshunginstitute.org/document/d/1Earmi3QY5TuGw-K94hTVOaITLj6RH5MA0Kz5wRMhIKA/edit?usp=sharing)
 
-### Starting Project
+#### Bootstrap Project
 Assuming that you have node.js installed globally
 ```sh
 npm install -g create-react-app
 
 create-react-app tib_learn_app
 cd tib_learn_app/
+npm install --save gh-pages
 git init
 rm package.json README.md
 git add .
@@ -70,9 +71,15 @@ git commit -m "First commit"
 git remote add origin https://github.com/ShangShungFoundation/tib_learn_app.git
 git pull origin master --allow-unrelated-histories
 npm start
-
 ```
 More [info](https://github.com/facebookincubator/create-react-app)
+
+####  Start Project
+`npm start`
+
+####  Deploy Project
+`npm run deploy`
+
 ### Credits: 
 * Prof. Fabian Sanders (initial idea, content, supervision)
 * Daniel Simonelli
