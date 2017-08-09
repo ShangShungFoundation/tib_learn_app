@@ -2,6 +2,7 @@
   "name": "learn_tib_app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://shangshungfoundation.github.io/tib_learn_app",
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
