@@ -84,6 +84,7 @@ We are grateful to following persons for their ideas and collaboration:
 
 * Prof. Fabian Sanders (initial idea, content, supervision)
 * Lobsang Zatul
+* Tsering Sangpo
 * Daniel Simonelli
 * Тatiana Аржакова
 * Kamil Selwa
