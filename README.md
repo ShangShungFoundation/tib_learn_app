@@ -83,6 +83,7 @@ npm start
 We are grateful to following persons for their ideas and collaboration:
 
 * Prof. Fabian Sanders (initial idea, content, supervision)
+* Lobsang Zatul
 * Daniel Simonelli
 * Тatiana Аржакова
 * Kamil Selwa
