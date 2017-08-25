@@ -1,0 +1,149 @@
+{
+  "range": "sentence2!A1:K17",
+  "majorDimension": "ROWS",
+  "values": [
+    [
+      "sentence",
+      "སངས་རྒྱས་",
+      "ཀྱིས་",
+      "མ་",
+      "གསུངས་",
+      "པ་",
+      "མཁས་གྲུབ་",
+      "གཞན་",
+      "གྱིས་",
+      "མ་",
+      "བྲིས་"
+    ],
+    [
+      "cls",
+      "noun ",
+      "inst. ",
+      "neg. ",
+      "verb ",
+      "nominaliser",
+      "noun ",
+      "adj. ",
+      "instr",
+      "neg ",
+      "verb"
+    ],
+    [
+      "grm",
+      "",
+      "",
+      "",
+      "transitive",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "transitive"
+    ],
+    [
+      "gls",
+      "Buddha",
+      "",
+      "not",
+      "said ",
+      "what ",
+      "wise men",
+      "other ",
+      "",
+      "not ",
+      "wrote"
+    ],
+    [
+      "1_sentence",
+      "སངས་རྒྱས་",
+      "ཀྱིས་",
+      "མ་",
+      "གསུངས་"
+    ],
+    [
+      "1_funct",
+      "agent",
+      "",
+      "negated verb"
+    ],
+    [
+      "1_meaning",
+      "The Buddha ",
+      "",
+      "not ",
+      "said "
+    ],
+    [
+      "1_translation",
+      "The Buddha did not say"
+    ],
+    [
+      "2_sentence",
+      "",
+      "",
+      "",
+      "",
+      "པ་"
+    ],
+    [
+      "2_funct",
+      "",
+      "",
+      "",
+      "",
+      "Nominalizer"
+    ],
+    [
+      "2_meaning",
+      "The Buddha ",
+      "",
+      "not ",
+      "said ",
+      "what"
+    ],
+    [
+      "2_translation",
+      "What the Buddha did not say"
+    ],
+    [
+      "3_sentence",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "མཁས་གྲུབ་",
+      "གཞན་",
+      "གྱིས་",
+      "མ་",
+      "བྲིས་"
+    ],
+    [
+      "3_meaning",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "wise men",
+      "other",
+      "",
+      "not ",
+      "wrote"
+    ],
+    [
+      "3_translation",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "other wise men have not written "
+    ],
+    [
+      "final",
+      "Other wise men did not write what the Buddha has not said"
+    ]
+  ]
+}
