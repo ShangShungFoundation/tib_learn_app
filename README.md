@@ -55,6 +55,8 @@ Medium
 
 ## Resources:
 * [Exporting audio using Audacity](https://docs.google.com/a/shangshunginstitute.org/document/d/1Earmi3QY5TuGw-K94hTVOaITLj6RH5MA0Kz5wRMhIKA/edit?usp=sharing)
+* [spreadseet data](https://docs.google.com/spreadsheets/d/1D6NW7phdjwmz7bnncNgJcwNVgwn39SsOCVvZ403VilE/edit?usp=sharing)
+* [syllabes - json data](https://sheets.googleapis.com/v4/spreadsheets/1D6NW7phdjwmz7bnncNgJcwNVgwn39SsOCVvZ403VilE/values/syllabes-unique!A1%3AC4056?key=AIzaSyCSZo1p3NxY73vcsDo554y3chNSTp4uhqY)
 
 ### Bootstrap Project
 Assuming that you have node.js installed globally. More [info](https://github.com/facebookincubator/create-react-app)
