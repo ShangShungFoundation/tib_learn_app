@@ -53,7 +53,7 @@ Medium
 ## Recommended toolset:
    - Editor: [Sublime Text 3](https://www.sublimetext.com/3) with [react support](https://medium.com/@adrianli/setting-up-sublime-text-3-for-reactjs-3bf6baceb73a), [Atom](https://atom.io/) [with react](https://medium.com/productivity-freak/my-atom-editor-setup-for-js-react-9726cd69ad20) or Vim ;)
    - Git client: Shell, [Git Desktop](https://desktop.github.com/)
-   - [ExtensionReact Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+   - [Extension - React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
 
 ## Resources:
 * [Exporting audio using Audacity](https://docs.google.com/a/shangshunginstitute.org/document/d/1Earmi3QY5TuGw-K94hTVOaITLj6RH5MA0Kz5wRMhIKA/edit?usp=sharing)
