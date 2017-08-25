@@ -38,6 +38,7 @@ Extremely useful tool for those interested in Classical Tibetan, Tibetan Traditi
 - [ ] Syllabe preview with wylie and pronuciation (mp3 audio)
 - [ ] Searchabe tib syllabes libary
 - [ ] Tibetan phrases with syllabes hints (form syllabes libary)
+- [ ] Tibetan phrases with syntax and grammar explanations
 
 ## Technologies: 
 
