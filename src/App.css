@@ -15,18 +15,21 @@
   font-size: 15px;
   font-style: italic;
   color: #b1aeae;
-  border-radius: 10px;
-  display:inline-block;
+  
 }
 .gls {
-  font-size: 20px;
+  font-size: 18px;
   color: #fbf3e4;
+  padding-top: 8px;
   font-weigth: normal;
 }
 .syl {
     display:inline-grid;
-    background: #423d3d;
+    background: #3e3a3a;
     margin-left:1px;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 10px;
 }
 
 .syl span {
@@ -49,16 +52,19 @@ ul{
   width: 100%;
   border-radius: 0;
   border-width: 0;
-  padding: 10px
+  padding: 10px;
+  margin-botton: 2px;
 }
 .translation {
   font-size: 20px;
+  margin-bottom: 20px;
 }
 footer {
   color: #676767
 }
 h1 {
   color: #969595;
+  margin-bottom: 3em;
 }
 footer a {
   color: #848484

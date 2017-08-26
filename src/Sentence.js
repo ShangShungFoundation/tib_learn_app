@@ -84,7 +84,7 @@ class Sentence extends Component {
       <div className="sentence">
         <div className="nextprev">
           <p>
-            {isNotFirtSentence && <button onClick={this.previous}>◄</button>}
+            {isNotFirtSentence && <button onClick={this.previous}>◀</button>}
             {isNotLastSentence && <button onClick={this.next}>►</button>}
           </p>
         </div>
@@ -99,8 +99,6 @@ class Sentence extends Component {
             </ul>
           </div>
         </div>
-
-        
       </div>
     );
   }

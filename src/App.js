@@ -7,14 +7,15 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Tibetan Learning App</h1>
-        
+
         <Sentence/>
 
         <footer>
-          Developed at  &nbsp;
-           <a href="https://shangshungfoundation.github.io/1st_merigar_hackathon/">1st Merigar Hackathon</a>
+          <p>Developed at  &nbsp;
+           <a href="https://github.com/ShangShungFoundation/1st_merigar_hackathon">1st Merigar Hackathon 2017</a>
             &nbsp;
-          organized by Shang Shung Foundation 2017
+          organized by Shang Shung Foundation 
+          </p>
         </footer>
       </div>
     );
