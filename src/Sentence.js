@@ -71,7 +71,7 @@ class Sentence extends Component {
       <div className="syl" key={i} >
           <TibWord w1={s} w2={sentence[i]}/>
           {this.state.showCls && <span className="cls">{funct[i]}</span>}
-          {this.state.showTrans && <span className="gls">{meaning[i]}</span>}
+          {this.state.showMeaning && <span className="gls">{meaning[i]}</span>}
       </div>)
   }
 
