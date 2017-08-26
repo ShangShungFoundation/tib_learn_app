@@ -3,6 +3,7 @@
   "majorDimension": "ROWS",
   "values": [
     [
+      "0",
       "sentence",
       "སངས་རྒྱས་",
       "ཀྱིས་",
@@ -12,11 +13,11 @@
       "མཁས་གྲུབ་",
       "གཞན་",
       "གྱིས་",
-      "མ་",
-      "བྲིས་"
+      "མ་"
     ],
     [
-      "cls",
+      "0",
+      "funct",
       "noun ",
       "inst. ",
       "neg. ",
@@ -25,24 +26,19 @@
       "noun ",
       "adj. ",
       "instr",
-      "neg ",
-      "verb"
+      "neg "
     ],
     [
-      "grm",
-      "",
-      "",
-      "",
-      "transitive",
-      "",
-      "",
+      "0",
+      "grammar",
       "",
       "",
       "",
       "transitive"
     ],
     [
-      "gls",
+      "0",
+      "meaning",
       "Buddha",
       "",
       "not",
@@ -51,35 +47,44 @@
       "wise men",
       "other ",
       "",
-      "not ",
-      "wrote"
+      "not "
     ],
     [
-      "1_sentence",
+      "0",
+      "translation",
+      "Other wise men did not write what the Buddha has not said"
+    ],
+    [
+      "1",
+      "sentence",
       "སངས་རྒྱས་",
       "ཀྱིས་",
       "མ་",
       "གསུངས་"
     ],
     [
-      "1_funct",
+      "1",
+      "funct",
       "agent",
       "",
       "negated verb"
     ],
     [
-      "1_meaning",
+      "1",
+      "meaning",
       "The Buddha ",
       "",
       "not ",
       "said "
     ],
     [
-      "1_translation",
+      "1",
+      "translation",
       "The Buddha did not say"
     ],
     [
-      "2_sentence",
+      "2",
+      "sentence",
       "",
       "",
       "",
@@ -87,7 +92,8 @@
       "པ་"
     ],
     [
-      "2_funct",
+      "2",
+      "funct",
       "",
       "",
       "",
@@ -95,7 +101,8 @@
       "Nominalizer"
     ],
     [
-      "2_meaning",
+      "2",
+      "meaning",
       "The Buddha ",
       "",
       "not ",
@@ -103,11 +110,13 @@
       "what"
     ],
     [
-      "2_translation",
-      "What the Buddha did not say"
+      "2",
+      "translation",
+      "What the Buddha has not said"
     ],
     [
-      "3_sentence",
+      "3",
+      "sentence",
       "",
       "",
       "",
@@ -116,11 +125,11 @@
       "མཁས་གྲུབ་",
       "གཞན་",
       "གྱིས་",
-      "མ་",
-      "བྲིས་"
+      "མ་"
     ],
     [
-      "3_meaning",
+      "3",
+      "meaning",
       "",
       "",
       "",
@@ -129,21 +138,17 @@
       "wise men",
       "other",
       "",
-      "not ",
-      "wrote"
+      "not "
     ],
     [
-      "3_translation",
+      "3",
+      "translation",
       "",
       "",
       "",
       "",
       "",
       "other wise men have not written "
-    ],
-    [
-      "final",
-      "Other wise men did not write what the Buddha has not said"
     ]
   ]
 }

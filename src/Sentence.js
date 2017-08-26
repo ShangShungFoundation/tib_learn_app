@@ -1,43 +1,91 @@
 import React, { Component } from 'react';
 import './App.css';
-import sentence from './sentence2.json'
+import example from './sentence2.json'
 
 
-function arr2obj(json){
-  let res = {}
+function prepareData(json){
+  let sentences = []
   for(var row in json){
-    res[json[row][0]] = json[row].slice(1);
-  }
-  return res
-}
+      if (sentences[json[row][0]] === undefined)
+          sentences[json[row][0]] = {}
 
-const Syl = ({tib, cls, gls}) => 
-  <div className="syl">
-    <span className="tib">{tib}</span>
-    <span className="cls">{cls}</span>
-    <span className="gls">{gls}</span>
-  </div>
+      sentences[json[row][0]][json[row][1]] = json[row].slice(2);
+  }
+  return sentences
+}
 
 
 class Sentence extends Component {
   constructor(props) {
     super(props);
+    this.example = prepareData(example.values)
+    this.sentenceQty = this.example.lenght
     this.state = {
-      data: arr2obj(sentence.values)
-    };
+        currSentence: this.example[0],
+        currSentenceNum: 0,
+        showTrans: false,
+        showCls: false}
+  }
+
+  toogleTrans = () => {
+    this.setState({showTrans: !this.state.showTrans})
+  }
+
+  toogleCls = () => {
+    this.setState({showCls: !this.state.showCls})
+  }
+
+  showAll = () => {
+    this.setState({showTrans: true, showCls:true})
   }
 
   renderSentence =() =>{
-    let snt = this.state.data.sentence;
-    let cls = this.state.data.cls;
-    let gls = this.state.data.gls;
-    return snt.map((s, i) => <Syl tib={s} cls={cls[i]} gls={gls[i]} key={i} /> )
+    let {sentence, funct, meaning} = this.state.currSentence;
+    return sentence.map((s, i) => 
+      <div className="syl" key={i} >
+          <span className="tib">{s}</span>
+          {this.state.showCls && <span className="cls">{funct[i]}</span>}
+          {this.state.showTrans && <span className="gls">{meaning[i]}</span>}
+      </div>)
+  }
+
+  previous = () => {
+    let previousSentenceNum = this.state.currSentenceNum - 1
+    this.setState({
+      currSentence: this.example[previousSentenceNum],
+      currSentenceNum: previousSentenceNum,}
+    )
+  }
+
+  next = () => {
+    let nextSentenceNum = this.state.currSentenceNum + 1
+    this.setState({
+      currSentence: this.example[nextSentenceNum],
+      currSentenceNum: nextSentenceNum,}
+    )
   }
 
   render() {
+    const display = this.renderSentence()
+    const isNotFirtSentence = (this.state.currSentenceNum === 0)? false : true;
+    const isNotLastSentence = (this.state.currSentenceNum === this.sentenceQty )? false: true;
     return (
       <div className="sentence">
-        <h1>{this.renderSentence()}</h1>
+        <div className="display">{display}</div>
+        <div className="menu">
+          <p>Show</p>
+          <ul>
+            <li><button onClick={this.toogleCls}>grammar</button></li>
+            <li><button onClick={this.toogleTrans}  href="#">word meaning</button></li>
+            <li><button onClick={this.showAll}  href="#">all</button></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            {isNotFirtSentence && <li><button onClick={this.previous}  href="#">previous</button></li>}
+            {isNotLastSentence &&<li><button onClick={this.next}  href="#">next</button></li>}
+          </ul>
+        </div>
       </div>
     );
   }
