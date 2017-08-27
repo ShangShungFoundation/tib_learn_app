@@ -7,6 +7,7 @@ class tibText extends Component {
   constructor(props) {
     super(props);
     this.text = props.text
+    console.log(props.text)
     this.textArray = []
   }
 
@@ -23,7 +24,7 @@ class tibText extends Component {
     	return ''
     let tib = `${this.textArray[i]}་`
     if (!find) {
-      return <Syllabe tib={tib} key={i} />
+      return <Syllabe tib={tib} key={i} className='notFound'/>
     } else {
       return <Syllabe tib={tib} wy={find.wy} dra={find.dra} spel={find.spel} key={i}/>
     }

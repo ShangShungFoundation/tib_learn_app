@@ -27,7 +27,7 @@ class Syllabe extends Component {
 		const {tib, wy, dra} = this.props
 		return(
 			<div className="syll">
-				{this.state.showTip && <Tip wy={wy} dra={dra} spel={this.spel} />}
+				{this.state.showTip && <a onClick={this.toogleTip}><Tip wy={wy} dra={dra} spel={this.spel}/></a>}
 				<a onClick={this.toogleTip} className="tib">{tib}</a>
 			</div>
 		);

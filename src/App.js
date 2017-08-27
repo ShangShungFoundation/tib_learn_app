@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Sentence from './Sentence.js'
-import Search from './Search.js'
+import SpellChecker from './SpellChecker.js'
 
 
 class App extends Component {
@@ -10,7 +10,7 @@ class App extends Component {
       <div className="App">
         <h1>Tibetan Learning App</h1>
 
-        <Search />
+        <SpellChecker />
         <hr/>
         <Sentence />
 

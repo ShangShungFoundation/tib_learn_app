@@ -6,7 +6,7 @@
   font-size: 50px;
   font-style:normal;
   text-shadow: 1px 1px 3px #000000; 
-
+  cursor: pointer;
 }
 .text {
   
@@ -15,7 +15,7 @@
   color: #f7e8a9;
 }
 .syll {
-  display:inline;
+  display:inline-block;
   background: #504f4f;
   border-radius: 5px;
   margin-left:1px;
@@ -98,6 +98,16 @@ footer a {
     margin-top: -90px;
     text-shadow: 1px 1px 1px #ffffff;
 }
+.tip:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-width: 10px;
+      border-style: solid;
+      border-color: #eae8e8 transparent transparent transparent;
+      left: 20px;
+}
 .queryInput {
   font-size: 25px;
   padding: 7px;
@@ -105,4 +115,10 @@ footer a {
 .ex {
   font-weight: normal;
   color: #bdbdbd
+}
+.wy {
+  font-style: italic;
+}
+.info {
+  color: #adacac;
 }
