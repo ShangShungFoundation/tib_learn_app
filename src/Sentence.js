@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import example from './sentence2.json'
+import TibText from './TibText.js'
 
 
 function prepareData(json){
@@ -15,8 +16,10 @@ function prepareData(json){
 }
 
 
-const TibWord = ({w1, w2}) =>   
-  <em className='tib'><span className={(w2 === '' || w2 === undefined)?'dimm':'highlight'}>{w1}</span></em>
+const TibWord = ({w1, w2}) =>
+  <div className={(w2 === '' || w2 === undefined)?'dimm':'highlight'}>
+    <TibText text={w1} />
+  </div>
 
 
 class Sentence extends Component {
@@ -68,7 +71,7 @@ class Sentence extends Component {
       funct = []
     }
     return fullSentence.map((s, i) => 
-      <div className="syl" key={i} >
+      <div className="word" key={i} >
           <TibWord w1={s} w2={sentence[i]}/>
           {this.state.showCls && <span className="cls">{funct[i]}</span>}
           {this.state.showMeaning && <span className="gls">{meaning[i]}</span>}

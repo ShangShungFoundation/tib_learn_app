@@ -17,7 +17,7 @@ class Syllabe extends Component {
 	constructor(props) {
 		super(props);
 		this.props = props
-		this.spel = `${URL}assets/mp3/sylabes/${props.spel}`
+		this.spel = `${URL}assets/mp3/sylabes/${encodeURIComponent(props.spel)}`
 		this.state = {showTip: false}
 	}
 	toogleTip = () => {
@@ -28,7 +28,7 @@ class Syllabe extends Component {
 		return(
 			<div className="syll">
 				{this.state.showTip && <Tip wy={wy} dra={dra} spel={this.spel} />}
-				<a onClick={this.toogleTip}>{tib}</a>
+				<a onClick={this.toogleTip} className="tib">{tib}</a>
 			</div>
 		);
 	}

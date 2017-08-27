@@ -5,11 +5,21 @@
 .tib {
   font-size: 50px;
   font-style:normal;
-  color: #f7e8a9;
   text-shadow: 1px 1px 3px #000000; 
+
+}
+.text {
+  
 }
 .highlight {
-  
+  color: #f7e8a9;
+}
+.syll {
+  display:inline;
+  background: #504f4f;
+  border-radius: 5px;
+  margin-left:1px;
+  padding-bottom: 10px;
 }
 .cls {
   font-size: 15px;
@@ -19,11 +29,10 @@
 }
 .gls {
   font-size: 18px;
-  color: #fbf3e4;
   padding-top: 8px;
   font-weight: normal;
 }
-.syl {
+.word {
     display:inline-grid;
     background: #3e3a3a;
     margin-left:1px;
@@ -34,7 +43,7 @@
     height: 120px;
 }
 
-.syl span {
+.word span {
     display: block;
 }
 
@@ -79,12 +88,15 @@ footer a {
   text-decoration: none;
 }
 .tip {
-  position: relative;
-  background: #eae8e8;
-  color: #000;
-  border-radius: 5px;
-  width: 100px;
-  padding: 5px;
+    position: absolute;
+    background: #eae8e8;
+    color: #000;
+    border-radius: 5px;
+    width: 50px;
+    padding: 5px;
+    font-size: 14px;
+    margin-top: -90px;
+    text-shadow: 1px 1px 1px #ffffff;
 }
 .queryInput {
   font-size: 25px;

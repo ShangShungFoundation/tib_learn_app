@@ -11,7 +11,7 @@ class App extends Component {
         <h1>Tibetan Learning App</h1>
 
         <Search />
-        
+        <hr/>
         <Sentence />
 
         <footer>
