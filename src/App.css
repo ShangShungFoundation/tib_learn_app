@@ -5,7 +5,7 @@
 .tib {
   font-size: 50px;
   font-style:normal;
-  color: #ffc75f;
+  color: #f7e8a9;
   text-shadow: 1px 1px 3px #000000; 
 }
 .highlight {
@@ -21,7 +21,7 @@
   font-size: 18px;
   color: #fbf3e4;
   padding-top: 8px;
-  font-weigth: normal;
+  font-weight: normal;
 }
 .syl {
     display:inline-grid;
@@ -30,6 +30,8 @@
     border-radius: 5px;
     padding-top: 5px;
     padding-bottom: 10px;
+    margin-bottom: 2px;
+    height: 120px;
 }
 
 .syl span {
@@ -68,4 +70,27 @@ h1 {
 }
 footer a {
   color: #848484
+}
+.syllabes a{
+  font-size: 50px;
+  font-style:normal;
+  color: #f7e8a9;
+  text-shadow: 1px 1px 3px #000000;
+  text-decoration: none;
+}
+.tip {
+  position: relative;
+  background: #eae8e8;
+  color: #000;
+  border-radius: 5px;
+  width: 100px;
+  padding: 5px;
+}
+.queryInput {
+  font-size: 25px;
+  padding: 7px;
+}
+.ex {
+  font-weight: normal;
+  color: #bdbdbd
 }
