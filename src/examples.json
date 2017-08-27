@@ -1,0 +1,356 @@
+{
+  "spreadsheetId": "1D6NW7phdjwmz7bnncNgJcwNVgwn39SsOCVvZ403VilE",
+  "valueRanges": [
+    {
+      "range": "sentence2!A1:L17",
+      "majorDimension": "ROWS",
+      "values": [
+        [
+          "0",
+          "sentence",
+          "སངས་རྒྱས་",
+          "ཀྱིས་",
+          "མ་",
+          "གསུངས་",
+          "པ་",
+          "མཁས་གྲུབ་",
+          "གཞན་",
+          "གྱིས་",
+          "མ་",
+          "བྲིས་"
+        ],
+        [
+          "0",
+          "funct",
+          "noun",
+          "inst.",
+          "neg",
+          "verb",
+          "norm.",
+          "noun",
+          "adj.",
+          "inst.",
+          "neg",
+          "verb"
+        ],
+        [
+          "0",
+          "grammar",
+          "",
+          "",
+          "",
+          "transitive",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "transitive"
+        ],
+        [
+          "0",
+          "meaning",
+          "The Buddha",
+          "",
+          "not",
+          "said ",
+          "what ",
+          "wise men",
+          "other ",
+          "",
+          "not ",
+          "wrote"
+        ],
+        [
+          "0",
+          "translation",
+          "Other wise men did not write what the Buddha has not said"
+        ],
+        [
+          "1",
+          "sentence",
+          "སངས་རྒྱས་",
+          "ཀྱིས་",
+          "མ་གསུངས་"
+        ],
+        [
+          "1",
+          "funct",
+          "agent",
+          "",
+          "negated verb"
+        ],
+        [
+          "1",
+          "meaning",
+          "The Buddha ",
+          "",
+          "not said "
+        ],
+        [
+          "1",
+          "translation",
+          "The Buddha did not say"
+        ],
+        [
+          "2",
+          "sentence",
+          "",
+          "",
+          "",
+          "",
+          "པ་"
+        ],
+        [
+          "2",
+          "funct",
+          "",
+          "",
+          "",
+          "",
+          "norm."
+        ],
+        [
+          "2",
+          "meaning",
+          "The Buddha ",
+          "",
+          "not ",
+          "said ",
+          "what"
+        ],
+        [
+          "2",
+          "translation",
+          "What the Buddha has not said"
+        ],
+        [
+          "3",
+          "sentence",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "མཁས་གྲུབ་",
+          "གཞན་",
+          "གྱིས་",
+          "མ་",
+          "བྲིས་"
+        ],
+        [
+          "3",
+          "funct",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "noun",
+          "adj.",
+          "inst.",
+          "neg",
+          "verb"
+        ],
+        [
+          "3",
+          "meaning",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "wise men",
+          "other",
+          "",
+          "not ",
+          "wrote"
+        ],
+        [
+          "3",
+          "translation",
+          "other wise men have not written "
+        ]
+      ]
+    },
+    {
+      "range": "Sentence3!A1:Q18",
+      "majorDimension": "ROWS",
+      "values": [
+        [
+          "0",
+          "sentence",
+          "འབྲོམ།",
+          "ཁྱོད་",
+          "ཀྱིས་",
+          "མ་",
+          "གོ་",
+          "བ་",
+          "ཡིན།",
+          "ནད་",
+          "དེ་",
+          "སྡིག་སྒྲིབ་",
+          "ཀྱི་",
+          "ཕྱགས་ཤིང་",
+          "ཆེན་པོ་",
+          "ཅིག་",
+          "ཡིན་"
+        ],
+        [
+          "0",
+          "class",
+          "noun",
+          "",
+          "",
+          "neg",
+          "verb",
+          "",
+          "verb"
+        ],
+        [
+          "0",
+          "grammar",
+          "",
+          "pers. pron",
+          "instrumental",
+          "",
+          "intr.",
+          "nominaliser",
+          "existence verb"
+        ],
+        [
+          "0",
+          "function",
+          "",
+          "",
+          "agentive",
+          "",
+          "",
+          "personifier"
+        ],
+        [
+          "0",
+          "meaning",
+          "",
+          "you",
+          "",
+          "not",
+          "understand",
+          "",
+          "are"
+        ],
+        [
+          "0",
+          "translation",
+          "brom, you are [a] non understander && Brom, you do not understand"
+        ],
+        [
+          "1",
+          "sentence",
+          "ནད་",
+          "དེ་",
+          "སྡིག་སྒྲིབ་",
+          "ཀྱི་",
+          "ཕྱགས་ཤིང་",
+          "ཆེན་པོ་",
+          "ཅིག་",
+          "ཡིན་"
+        ],
+        [
+          "1",
+          "class",
+          "noun",
+          "demonstrative adj.",
+          "noun",
+          "",
+          "noun",
+          "adj.",
+          "",
+          "verb"
+        ],
+        [
+          "1",
+          "grammar",
+          "",
+          "",
+          "",
+          "genitive",
+          "",
+          "",
+          "indeterminative article",
+          "existence verb"
+        ],
+        [
+          "1",
+          "function",
+          "",
+          "",
+          "",
+          "specifier"
+        ],
+        [
+          "1",
+          "meaning",
+          "that ailment",
+          "",
+          "obstacles",
+          "of",
+          "broom",
+          "great",
+          "one",
+          "is"
+        ],
+        [
+          "1",
+          "translation",
+          "That ailment is a great broom of obscurations"
+        ],
+        [
+          "2",
+          "sentence",
+          "འབྲོམ།",
+          "ཁྱོད་",
+          "ཀྱིས་",
+          "མ་",
+          "གོ་",
+          "བ་",
+          "ཡིན།",
+          "ནད་",
+          "དེ་",
+          "སྡིག་སྒྲིབ་",
+          "ཀྱི་",
+          "ཕྱགས་ཤིང་",
+          "ཆེན་པོ་",
+          "ཅིག་",
+          "ཡིན་"
+        ],
+        [
+          "2",
+          "class",
+          "",
+          "",
+          "",
+          "",
+          "norm."
+        ],
+        [
+          "2",
+          "grammar"
+        ],
+        [
+          "2",
+          "function"
+        ],
+        [
+          "2",
+          "meaning"
+        ],
+        [
+          "2",
+          "translation",
+          "Brom, you do not understand, that ailment is a great broom for obscurations"
+        ]
+      ]
+    }
+  ]
+}
