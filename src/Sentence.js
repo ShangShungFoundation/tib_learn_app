@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import example from './sentence2.json'
+import examples from './examples.json'
 import TibText from './TibText.js'
 
 
@@ -25,16 +25,22 @@ const TibWord = ({w1, w2}) =>
 class Sentence extends Component {
   constructor(props) {
     super(props);
-    this.example = prepareData(example.values)
+    this.examples = examples.valueRanges
+    this.exampleQty = this.examples.length
+    this.state = this.initExample(0)
+  }
+  initExample(exampleNum) {
+    this.example = prepareData(this.examples[exampleNum].values)
     this.sentenceQty = this.example.length
-    this.state = {
+    return {
+        currExampleNum: exampleNum,
         currSentence: this.example[0],
         currSentenceNum: 0,
         showTrans: false,
         showMeaning: false,
-        showCls: false}
+        showCls: false
+    }
   }
-
   toogleMeaning = () => {
     this.setState({showMeaning: !this.state.showMeaning})
   }
@@ -64,6 +70,11 @@ class Sentence extends Component {
     )
   }
 
+  nextExample = () => {
+    let nextExampleNum = this.state.currExampleNum + 1
+    this.setState(this.initExample(nextExampleNum))
+  }
+
   renderSentence =() =>{
     let fullSentence = this.example[0].sentence
     let {sentence, funct, meaning} = this.state.currSentence;
@@ -83,6 +94,7 @@ class Sentence extends Component {
     const translation = (this.state.showTrans)? this.state.currSentence.translation: ""
     const isNotFirtSentence = (this.state.currSentenceNum === 0)? false : true;
     const isNotLastSentence = (this.state.currSentenceNum === this.sentenceQty - 1 )? false: true;
+    const isNotLastExample = (this.state.currExampleNum === this.exampleQty - 1 )? false: true;
     return (
       <div className="sentence">
         <div className="nextprev">
@@ -101,6 +113,11 @@ class Sentence extends Component {
               <li><button onClick={this.showAll}>all</button></li>
             </ul>
           </div>
+        </div>
+        <div className="nextprev">
+          <p>
+            {isNotLastExample && <button onClick={this.nextExample}> next example ►</button>}
+          </p>
         </div>
       </div>
     );
