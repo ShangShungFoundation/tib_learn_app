@@ -16,7 +16,7 @@
 }
 .syll {
   display:inline-block;
-  background:#77616c;
+  background: #4e3f47;
   border-radius: 5px;
   margin-left:1px;
   padding-bottom: 10px;
@@ -55,7 +55,7 @@ ul{
    list-style-type: none;
 }
 .menu {
-  width: 200px;
+  width: 150px;
 }
 .menu button {
   background: #2b2b2b;
@@ -111,6 +111,7 @@ footer a {
 .queryInput {
   font-size: 25px;
   padding: 7px;
+  margin: 2em;
 }
 .ex {
   font-weight: normal;
