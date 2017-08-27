@@ -110,7 +110,9 @@ footer a {
 }
 .queryInput {
   font-size: 25px;
-  padding: 7px;
+  padding: 12px;
+  border: 14px solid #0a0a0a;
+  margin: 2em;
 }
 .ex {
   font-weight: normal;

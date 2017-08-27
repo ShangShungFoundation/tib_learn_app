@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-const URL = 'https://raw.githubusercontent.com/ShangShungFoundation/tib_learn_app/master/src/'
+const URL = 'https://shangshungfoundation.github.io/tib_learn_app/'
 
 const Tip = ({wy, dra, spel}) => 
 	<div className="tip">
