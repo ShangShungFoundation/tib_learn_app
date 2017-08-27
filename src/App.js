@@ -1,29 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
-import Sentence from './Sentence.js'
-import SpellChecker from './SpellChecker.js'
+import Header from './Header.js'
+import Main from './Main.js'
+import Footer from './Footer.js'
 
-
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <h1>Tibetan Learning App</h1>
-
-        <SpellChecker />
-        <hr/>
-        <Sentence />
-
-        <footer>
-          <p>Developed at  &nbsp;
-            <a href="https://github.com/ShangShungFoundation/1st_merigar_hackathon">1st Merigar Hackathon 2017</a>
-            &nbsp;
-            organized by Shang Shung Foundation 
-          </p>
-        </footer>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div className="App">
+    <Header />
+    <Main />
+    <Footer />
+  </div>
+)
 
 export default App;

@@ -16,7 +16,7 @@
 }
 .syll {
   display:inline-block;
-  background: #504f4f;
+  background:#77616c;
   border-radius: 5px;
   margin-left:1px;
   padding-bottom: 10px;
@@ -34,7 +34,7 @@
 }
 .word {
     display:inline-grid;
-    background: #3e3a3a;
+    background: #523c3c;
     margin-left:1px;
     border-radius: 5px;
     padding-top: 5px;
@@ -121,4 +121,30 @@ footer a {
 }
 .info {
   color: #adacac;
+}
+header, footer{
+  background: #000000;
+  clear: both;
+}
+header nav li{
+  float: left;
+  display:inline-block;
+  clear: right;
+}
+header nav a{
+  color: #fff;
+  text-decoration: none;
+  padding-right: 20px;
+}
+main {
+  clear: both;
+  width: 100%;
+  height: 50%;
+  overflow: visible;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+footer{
+  display: none;
 }
