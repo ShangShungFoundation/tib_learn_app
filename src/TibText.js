@@ -7,7 +7,6 @@ class tibText extends Component {
   constructor(props) {
     super(props);
     this.text = props.text
-    console.log(props.text)
     this.textArray = []
   }
 
