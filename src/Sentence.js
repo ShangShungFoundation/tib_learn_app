@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import './App.css';
 import examples from './examples.json'
 import TibText from './TibText.js'
+
+
+const examplesURL = 'https://sheets.googleapis.com/v4/spreadsheets/1D6NW7phdjwmz7bnncNgJcwNVgwn39SsOCVvZ403VilE/values:batchGet?ranges=sentence2!A1:L17&ranges=sentence3!A1:Q24&majorDimension=ROWS&key=AIzaSyCSZo1p3NxY73vcsDo554y3chNSTp4uhqY'
 
 
 function prepareData(json){
@@ -25,9 +29,14 @@ const TibWord = ({w1, w2}) =>
 class Sentence extends Component {
   constructor(props) {
     super(props);
-    this.examples = examples.valueRanges
-    this.exampleQty = this.examples.length
-    this.state = this.initExample(0)
+  }
+  componentDidMount() {
+      axios.get(examplesURL)
+        .then(res => {
+          this.examples = res.data.valueRanges;
+          this.exampleQty = this.examples.length
+          this.setState(this.initExample(0))
+      });
   }
   initExample(exampleNum) {
     this.example = prepareData(this.examples[exampleNum].values)
@@ -107,11 +116,15 @@ class Sentence extends Component {
   }
 
   render() {
+    if (!this.state) {
+        return <p className="loading">Loading</p>
+    }
     const display = this.renderSentence()
     const translation = this.renderTranslation()
     const isNotFirtSentence = (this.state.currSentenceNum === 0)? false : true;
     const isNotLastSentence = (this.state.currSentenceNum === this.sentenceQty - 1 )? false: true;
     const isNotLastExample = (this.state.currExampleNum === this.exampleQty - 1 )? false: true;
+
     return (
       <div className="sentence">
         <p>
