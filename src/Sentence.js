@@ -38,7 +38,8 @@ class Sentence extends Component {
         currSentenceNum: 0,
         showTrans: false,
         showMeaning: false,
-        showCls: false
+        showCls: false,
+        showGrammar: false
     }
   }
   toogleMeaning = () => {
@@ -49,6 +50,9 @@ class Sentence extends Component {
   }
   toogleCls = () => {
     this.setState({showCls: !this.state.showCls})
+  }
+  toogleGrammar = () => {
+    this.setState({showGrammar: !this.state.showGrammar})
   }
   showAll = () => {
     this.setState({showTrans: true, showCls:true, showMeaning: true})
@@ -77,15 +81,15 @@ class Sentence extends Component {
 
   renderSentence =() =>{
     let fullSentence = this.example[0].sentence
-    let {sentence, funct, meaning} = this.state.currSentence;
-    if (funct === undefined) {
-      funct = []
-    }
+    let {sentence, meaning} = this.state.currSentence;
+    let cls = this.state.currSentence.class || []
+    let grammar = this.state.currSentence.grammar || []
     return fullSentence.map((s, i) => 
       <div className="word" key={i} >
           <TibWord w1={s} w2={sentence[i]}/>
-          {this.state.showCls && <span className="cls">{funct[i]}</span>}
-          {this.state.showMeaning && <span className="gls">{meaning[i]}</span>}
+          <p className="cls">{cls[i]}</p>
+          <p className="grm">{grammar[i]}</p>
+          <p className="gls">{meaning[i]}</p>
       </div>)
   }
 
@@ -107,9 +111,10 @@ class Sentence extends Component {
         <div className="display">{display}
           <div className="menu">
             <ul>
-              <li><button onClick={this.toogleCls}>grammar</button></li>
-              <li><button onClick={this.toogleMeaning}>word meaning</button></li>
-              <li><button onClick={this.toogleTranslation}>show translation</button></li>
+              <li><button onClick={this.toogleCls}>class</button></li>
+              <li><button onClick={this.toogleGrammar}>grammar</button></li>
+              <li><button onClick={this.toogleMeaning}>meaning</button></li>
+              <li><button onClick={this.toogleTranslation}>translation</button></li>
               <li><button onClick={this.showAll}>all</button></li>
             </ul>
           </div>
