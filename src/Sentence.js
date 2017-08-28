@@ -39,7 +39,8 @@ class Sentence extends Component {
         showTrans: false,
         showMeaning: false,
         showCls: false,
-        showGrammar: false
+        showGrammar: false,
+        showFunction: false
     }
   }
   toogleMeaning = () => {
@@ -54,8 +55,13 @@ class Sentence extends Component {
   toogleGrammar = () => {
     this.setState({showGrammar: !this.state.showGrammar})
   }
+  toogleFunction = () => {
+    this.setState({showFunction: !this.state.showFunction})
+  }
   showAll = () => {
-    this.setState({showTrans: true, showCls:true, showMeaning: true})
+    this.setState({
+      showTrans: true, showCls:true, showGrammar: true,
+      showMeaning: true, showFunction: true})
   }
 
   previous = () => {
@@ -84,44 +90,48 @@ class Sentence extends Component {
     let {sentence, meaning} = this.state.currSentence;
     let cls = this.state.currSentence.class || []
     let grammar = this.state.currSentence.grammar || []
+    let fun = this.state.currSentence.function || []
     return fullSentence.map((s, i) => 
       <div className="word" key={i} >
           <TibWord w1={s} w2={sentence[i]}/>
-          <p className="cls">{cls[i]}</p>
-          <p className="grm">{grammar[i]}</p>
-          <p className="gls">{meaning[i]}</p>
+          <p className="cls">{this.state.showCls && cls[i] }</p>
+          <p className="grm">{this.state.showGrammar && grammar[i] }</p>
+          <p className="fun">{this.state.showFunction && fun[i] }</p>
+          <p className="gls">{this.state.showMeaning && meaning[i] }</p>
       </div>)
+  }
+  renderTranslation(){
+    let trans = this.state.currSentence.translation[0]
+    if (!this.state.showTrans || trans === '') return ""
+    return trans.split('&&').map((s,i) => <p key={i}>{s.trim()}</p>)
   }
 
   render() {
     const display = this.renderSentence()
-    const translation = (this.state.showTrans)? this.state.currSentence.translation: ""
+    const translation = this.renderTranslation()
     const isNotFirtSentence = (this.state.currSentenceNum === 0)? false : true;
     const isNotLastSentence = (this.state.currSentenceNum === this.sentenceQty - 1 )? false: true;
     const isNotLastExample = (this.state.currExampleNum === this.exampleQty - 1 )? false: true;
     return (
       <div className="sentence">
+        <p>
+          {isNotLastExample && <button onClick={this.nextExample} className="nextExam"> next example  ►</button>}
+        </p>
+        <div className="display">{display}
+          <div className="word menu">
+              <p><button className="butAll" onClick={this.showAll}>all</button></p>
+              <p className={this.state.showCls && 'active'}><button className="cls" onClick={this.toogleCls}>class</button></p>
+              <p className={this.state.showGrammar && 'active'}><button className="butGra" onClick={this.toogleGrammar}>grammar</button></p>
+              <p className={this.state.showFunction && 'active'}><button className="fun" onClick={this.toogleFunction}>function</button></p>
+              <p className={this.state.showMeaning && 'active'}><button className="gls" onClick={this.toogleMeaning}>meaning</button></p>
+              <p className={this.state.showTrans && 'active'}><button className="butTra" onClick={this.toogleTranslation}>translation</button></p>
+          </div>
+        </div>
+        <div className="translation">{translation}</div>
         <div className="nextprev">
           <p>
             {isNotFirtSentence && <button onClick={this.previous}>◀</button>}
             {isNotLastSentence && <button onClick={this.next}>►</button>}
-          </p>
-        </div>
-        <div className="translation">{translation}</div>
-        <div className="display">{display}
-          <div className="menu">
-            <ul>
-              <li><button onClick={this.toogleCls}>class</button></li>
-              <li><button onClick={this.toogleGrammar}>grammar</button></li>
-              <li><button onClick={this.toogleMeaning}>meaning</button></li>
-              <li><button onClick={this.toogleTranslation}>translation</button></li>
-              <li><button onClick={this.showAll}>all</button></li>
-            </ul>
-          </div>
-        </div>
-        <div className="nextprev">
-          <p>
-            {isNotLastExample && <button onClick={this.nextExample}> next example ►</button>}
           </p>
         </div>
       </div>

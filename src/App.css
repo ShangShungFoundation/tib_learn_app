@@ -1,15 +1,14 @@
 .App {
   text-align: center;
 }
-
+ul{
+   list-style-type: none;
+}
 .tib {
   font-size: 50px;
   font-style:normal;
   text-shadow: 1px 1px 3px #000000; 
   cursor: pointer;
-}
-.text {
-  
 }
 .highlight {
   color: #f7e8a9;
@@ -25,11 +24,9 @@
   font-size: 15px;
   font-style: italic;
   color: #b1aeae;
-  
 }
 .gls {
   font-size: 18px;
-  padding-top: 8px;
   font-weight: normal;
 }
 .word {
@@ -40,61 +37,39 @@
     padding-top: 5px;
     padding-bottom: 10px;
     margin-bottom: 4px;
-    height: 140px;
+    height: 160px;
 }
 
 .word p {
-    display: block;
     margin: 0;
-    height: 15px;
     font-size: 15px;
 }
-p.grm {
+p.grm, p.fun {
   font-size: 12px;
+  font-style:normal;
 }
 .dimm {
   color: #a09b9d;
 }
 
-ul{
-   list-style-type: none;
-}
-.menu {
-  display: inline-grid;
-  position:absolute;
-  width: 100px;
-  height: 135px;
-  border-radius: 5px;
-  overflow: hidden;
-  border:1px solid #522a2a;
-  background: black;
-}
-.menu ul {
-  margin: 0;
-  padding:0
-}
-.menu button {
+.word button {
+  display:block;
   background: transparent;
   color: #d8d8d8;
   width: 100%;
-  border-radius: 5px;
   border-width: 0;
-  padding: 8px;
-  margin-botton: 1px;
+}
+.menu {
+  background: black;
 }
 .translation {
   font-size: 20px;
   margin-bottom: 20px;
 }
-footer {
-  color: #676767
-}
+
 h1 {
   color: #969595;
   margin-bottom: 3em;
-}
-footer a {
-  color: #848484
 }
 .syllabes a{
   font-size: 50px;
@@ -108,7 +83,7 @@ footer a {
     background: #eae8e8;
     color: #000;
     border-radius: 5px;
-    width: 50px;
+    width: 60px;
     padding: 5px;
     font-size: 14px;
     margin-top: -80px;
@@ -146,11 +121,11 @@ footer a {
 header, footer{
   background: #000000;
   clear: both;
+  display: block;
 }
 header nav li{
   float: left;
   display:inline-block;
-  clear: right;
 }
 header nav a{
   color: #fff;
@@ -170,4 +145,27 @@ footer{
   position:absolute;
   bottom: 0;
   width: 100%;
+  color: #676767
+}
+.nextprev button {
+  width: 50px;
+  height: 50px;
+  border-width:0;
+  border-radius: 25px;
+  margin: 10px;
+  background: #f1deaf;
+}
+.nextExam {
+  display: block;
+  background: #b54e4e;
+ font-size: 14px;
+  padding: 14px;
+  border-radius: 5px;
+  border-width:0;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff9ee
+}
+.active {
+  background: #b54e4e;
 }

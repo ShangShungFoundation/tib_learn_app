@@ -174,7 +174,7 @@
       ]
     },
     {
-      "range": "Sentence3!A1:Q18",
+      "range": "Sentence3!A1:Q24",
       "majorDimension": "ROWS",
       "values": [
         [
@@ -198,6 +198,38 @@
         ],
         [
           "0",
+          "class"
+        ],
+        [
+          "0",
+          "grammar"
+        ],
+        [
+          "0",
+          "function"
+        ],
+        [
+          "0",
+          "meaning"
+        ],
+        [
+          "0",
+          "translation",
+          "brom, you are [a] non understander && Brom, you do not understand"
+        ],
+        [
+          "1",
+          "sentence",
+          "འབྲོམ།",
+          "ཁྱོད་",
+          "ཀྱིས་",
+          "མ་",
+          "གོ་",
+          "བ་",
+          "ཡིན།"
+        ],
+        [
+          "1",
           "class",
           "noun",
           "",
@@ -208,7 +240,7 @@
           "verb"
         ],
         [
-          "0",
+          "1",
           "grammar",
           "",
           "pers. pron",
@@ -219,7 +251,7 @@
           "existence verb"
         ],
         [
-          "0",
+          "1",
           "function",
           "",
           "",
@@ -229,7 +261,7 @@
           "personifier"
         ],
         [
-          "0",
+          "1",
           "meaning",
           "",
           "you",
@@ -240,13 +272,20 @@
           "are"
         ],
         [
-          "0",
+          "1",
           "translation",
           "brom, you are [a] non understander && Brom, you do not understand"
         ],
         [
-          "1",
+          "2",
           "sentence",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
           "ནད་",
           "དེ་",
           "སྡིག་སྒྲིབ་",
@@ -257,8 +296,15 @@
           "ཡིན་"
         ],
         [
-          "1",
+          "2",
           "class",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
           "noun",
           "demonstrative adj.",
           "noun",
@@ -269,8 +315,15 @@
           "verb"
         ],
         [
-          "1",
+          "2",
           "grammar",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
           "",
           "",
           "",
@@ -281,16 +334,30 @@
           "existence verb"
         ],
         [
-          "1",
+          "2",
           "function",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
           "",
           "",
           "",
           "specifier"
         ],
         [
-          "1",
+          "2",
           "meaning",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
           "that ailment",
           "",
           "obstacles",
@@ -301,12 +368,12 @@
           "is"
         ],
         [
-          "1",
+          "2",
           "translation",
           "That ailment is a great broom of obscurations"
         ],
         [
-          "2",
+          "3",
           "sentence",
           "འབྲོམ།",
           "ཁྱོད་",
@@ -325,28 +392,79 @@
           "ཡིན་"
         ],
         [
-          "2",
+          "3",
           "class",
+          "noun",
+          "",
+          "",
+          "neg",
+          "verb",
+          "",
+          "verb",
+          "noun",
+          "demonstrative adj.",
+          "noun",
+          "",
+          "noun",
+          "adj.",
+          "",
+          "verb"
+        ],
+        [
+          "3",
+          "grammar",
+          "",
+          "pers. pron",
+          "instrumental",
+          "",
+          "intr.",
+          "nominaliser",
+          "existence verb",
+          "",
+          "",
+          "",
+          "genitive",
+          "",
+          "",
+          "indeterminative article",
+          "existence verb"
+        ],
+        [
+          "3",
+          "function",
+          "",
+          "",
+          "agentive",
+          "",
+          "",
+          "personifier",
           "",
           "",
           "",
           "",
-          "norm."
+          "specifier"
         ],
         [
-          "2",
-          "grammar"
+          "3",
+          "meaning",
+          "",
+          "you",
+          "",
+          "not",
+          "understand",
+          "",
+          "are",
+          "that ailment",
+          "",
+          "obstacles",
+          "of",
+          "broom",
+          "great",
+          "one",
+          "is"
         ],
         [
-          "2",
-          "function"
-        ],
-        [
-          "2",
-          "meaning"
-        ],
-        [
-          "2",
+          "3",
           "translation",
           "Brom, you do not understand, that ailment is a great broom for obscurations"
         ]
