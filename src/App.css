@@ -172,7 +172,8 @@ footer{
   background: rgba(228, 222, 207, 0.14);
 }
 .nextExam {
-  display: block;
+
+  display: inline-block;
   background: #b54e4e;
  font-size: 14px;
   padding: 14px;
@@ -180,7 +181,8 @@ footer{
   border-width:0;
   margin-left: auto;
   margin-right: auto;
-  color: #fff9ee
+  color: #fff9ee;
+  margin: 5px
 }
 .active {
   background: #b54e4e;

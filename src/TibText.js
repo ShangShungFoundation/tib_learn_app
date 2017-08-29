@@ -18,8 +18,6 @@ class tibText extends Component {
     let syllArray = textWhiteSpaceArray.map((w) => w.split('་').map((s, i) => this.renderSylabe(s, i)))
     let spacer = (this.props.spacer)? <span>&nbsp;</span> : [];
     return syllArray.map((a, i) => [...a, spacer])
-    // this.textArray = text.split('་')
-    // return this.textArray.map((s, i) => this.renderSylabe(s, i))
   }
 
   renderSylabe(s, i) {

@@ -8,7 +8,7 @@ const Tip = ({wy, dra, spel}) =>
 		<p className="wy">{wy}</p>
 		<p className="dra">{dra}</p>
 		{ (spel !== '' ) &&
-		<audio autoPlay>
+		<audio autoPlay key={wy}>
 			<source src={`${URL}assets/mp3/sylabes/${encodeURIComponent(spel)}`} type="audio/mpeg" />
 		</audio>
 		}
@@ -18,15 +18,13 @@ const Tip = ({wy, dra, spel}) =>
 class Syllabe extends Component {
 	constructor(props) {
 		super(props);
-		this.props = props
-		this.spel = props.spel
 		this.state = {showTip: false}
 	}
 	toogleTip = () => {
 	    this.setState({showTip: !this.state.showTip})
 	}
 	render() {
-		const {tib, wy, dra} = this.props
+		const {tib, wy, dra, spel} = this.props
 		if (this.props.wy === undefined)
 			return(
 				<div className="syll"><a className="tib notFound">{tib}</a></div>
@@ -34,7 +32,8 @@ class Syllabe extends Component {
 		else
 			return(
 				<div className="syll">
-					{this.state.showTip && <a onClick={this.toogleTip}><Tip wy={wy} dra={dra} spel={this.spel}/></a>}
+					{this.state.showTip && <a onClick={this.toogleTip}>
+						<Tip wy={wy} dra={dra} spel={spel} /></a>}
 					<a onClick={this.toogleTip} className="tib">{tib}</a>
 				</div>
 			);

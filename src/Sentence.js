@@ -89,6 +89,10 @@ class Sentence extends Component {
     let nextExampleNum = this.state.currExampleNum + 1
     this.setState(this.initExample(nextExampleNum))
   }
+  prevExample = () => {
+    let nextExampleNum = this.state.currExampleNum + -1
+    this.setState(this.initExample(nextExampleNum))
+  }
 
   renderSentence =() =>{
     let fullSentence = this.example[0].sentence
@@ -120,11 +124,13 @@ class Sentence extends Component {
     const translation = this.renderTranslation()
     const isNotFirtSentence = (this.state.currSentenceNum === 0)? false : true;
     const isNotLastSentence = (this.state.currSentenceNum === this.sentenceQty - 1 )? false: true;
+    const isNotFirstExample = (this.state.currExampleNum === 0)? false: true;
     const isNotLastExample = (this.state.currExampleNum === this.exampleQty - 1 )? false: true;
 
     return (
       <div className="sentence">
         <p>
+          {isNotFirstExample && <button onClick={this.prevExample} className="nextExam"> ◀ prev. example</button>}
           {isNotLastExample && <button onClick={this.nextExample} className="nextExam"> next example  ►</button>}
         </p>
         <div className="display">
