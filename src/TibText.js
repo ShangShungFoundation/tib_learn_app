@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-// import Find from './lib/Find.js'
+import Find from './lib/Find.js'
 import Syllabe from './Syllabe.js'
 import axios from 'axios';
 
 const syllabesURL = 'https://sheets.googleapis.com/v4/spreadsheets/1D6NW7phdjwmz7bnncNgJcwNVgwn39SsOCVvZ403VilE/values/syllabes-unique!A2%3AC4056?key=AIzaSyCSZo1p3NxY73vcsDo554y3chNSTp4uhqY'
+
 
 class tibText extends Component {
   constructor(props) {
@@ -17,12 +18,19 @@ class tibText extends Component {
       .then(res => {
         this.syllabes = res.data.values;
       });
+    this.textArray = []
+    this.wylieArray = []
+    this.isWylie = false  //this.isLatin(props.text)
+  }
+  isLatin(text) {
+    return /[\u00BF-\u1FFF\u2C00-\uD7FF\w]/.test(text)
   }
   toSyllabes(text){
-    if (text.endsWith('་'))
-      text = `${text.slice(0, -1)}་`
-    this.textArray = text.split('་')
-    return this.textArray.map((s, i) => this.renderSylabe(s, i))
+    let textWhiteSpaceArray = text.split(/[ ]+/g)
+    let syllArray = textWhiteSpaceArray.map((w) => w.split('་').map((s, i) => this.renderSylabe(s, i)))
+    return syllArray.map((a, i) => [...a, <span>&nbsp;</span>])
+    // this.textArray = text.split('་')
+    // return this.textArray.map((s, i) => this.renderSylabe(s, i))
   }
   search(string) {
       string = string.trim()
@@ -40,19 +48,22 @@ class tibText extends Component {
     return false
   }
   renderSylabe(s, i) {
-    var find = this.search(s)
+    let tib = ''
     if (s === '')
-    	return ''
-    let tib = `${this.textArray[i]}་`
-    if (!find) {
-      return <Syllabe tib={tib} key={i} className='notFound'/>
+      return ''
+    var find = Find(s, this.isWylie)
+    if (!this.isWylie) {
+      this.wylieArray.push(find.wy || s)
+      tib = s.endsWith('།')? s : `${s}་`;
     } else {
-      return <Syllabe tib={tib} wy={find.wy} dra={find.dra} spel={find.spel} key={i}/>
+      tib = find.tib
     }
+    return (<Syllabe tib={tib} key={i} wy={find.wy} dra={find.dra} spel={find.spel} />)
   }
 
   render() {
-    const syllabes = this.toSyllabes(this.text)
+    const syllabes = this.toSyllabes(this.props.text)
+    const wylie = this.wylieArray.join(' ')
     return(
       <div className='tib'>
         {syllabes}

@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import './App.css';
 import examples from './examples.json'
 import TibText from './TibText.js'
+
+
+const examplesURL = 'https://sheets.googleapis.com/v4/spreadsheets/1D6NW7phdjwmz7bnncNgJcwNVgwn39SsOCVvZ403VilE/values:batchGet?ranges=sentence2!A1:L17&ranges=sentence3!A1:Q24&ranges=sentence4!A1:N6&majorDimension=ROWS&key=AIzaSyCSZo1p3NxY73vcsDo554y3chNSTp4uhqY'
 
 
 function prepareData(json){
@@ -25,9 +29,14 @@ const TibWord = ({w1, w2}) =>
 class Sentence extends Component {
   constructor(props) {
     super(props);
-    this.examples = examples.valueRanges
-    this.exampleQty = this.examples.length
-    this.state = this.initExample(0)
+  }
+  componentDidMount() {
+      axios.get(examplesURL)
+        .then(res => {
+          this.examples = res.data.valueRanges;
+          this.exampleQty = this.examples.length
+          this.setState(this.initExample(0))
+      });
   }
   initExample(exampleNum) {
     this.example = prepareData(this.examples[exampleNum].values)
@@ -38,7 +47,9 @@ class Sentence extends Component {
         currSentenceNum: 0,
         showTrans: false,
         showMeaning: false,
-        showCls: false
+        showCls: false,
+        showGrammar: false,
+        showFunction: false
     }
   }
   toogleMeaning = () => {
@@ -50,8 +61,16 @@ class Sentence extends Component {
   toogleCls = () => {
     this.setState({showCls: !this.state.showCls})
   }
+  toogleGrammar = () => {
+    this.setState({showGrammar: !this.state.showGrammar})
+  }
+  toogleFunction = () => {
+    this.setState({showFunction: !this.state.showFunction})
+  }
   showAll = () => {
-    this.setState({showTrans: true, showCls:true, showMeaning: true})
+    this.setState({
+      showTrans: true, showCls:true, showGrammar: true,
+      showMeaning: true, showFunction: true})
   }
 
   previous = () => {
@@ -77,46 +96,55 @@ class Sentence extends Component {
 
   renderSentence =() =>{
     let fullSentence = this.example[0].sentence
-    let {sentence, funct, meaning} = this.state.currSentence;
-    if (funct === undefined) {
-      funct = []
-    }
+    let {sentence, meaning} = this.state.currSentence;
+    let cls = this.state.currSentence.class || []
+    let grammar = this.state.currSentence.grammar || []
+    let fun = this.state.currSentence.function || []
     return fullSentence.map((s, i) => 
       <div className="word" key={i} >
           <TibWord w1={s} w2={sentence[i]}/>
-          {this.state.showCls && <span className="cls">{funct[i]}</span>}
-          {this.state.showMeaning && <span className="gls">{meaning[i]}</span>}
+          <p className="cls">{this.state.showCls && cls[i] }</p>
+          <p className="grm">{this.state.showGrammar && grammar[i] }</p>
+          <p className="fun">{this.state.showFunction && fun[i] }</p>
+          <p className="gls">{this.state.showMeaning && meaning[i] }</p>
       </div>)
+  }
+  renderTranslation(){
+    let trans = this.state.currSentence.translation[0]
+    if (!this.state.showTrans || trans === '') return ""
+    return trans.split('&&').map((s,i) => <p key={i}>{s.trim()}</p>)
   }
 
   render() {
+    if (!this.state) {
+        return <p className="loading">Loading Examples...</p>
+    }
     const display = this.renderSentence()
-    const translation = (this.state.showTrans)? this.state.currSentence.translation: ""
+    const translation = this.renderTranslation()
     const isNotFirtSentence = (this.state.currSentenceNum === 0)? false : true;
     const isNotLastSentence = (this.state.currSentenceNum === this.sentenceQty - 1 )? false: true;
     const isNotLastExample = (this.state.currExampleNum === this.exampleQty - 1 )? false: true;
+
     return (
       <div className="sentence">
+        <p>
+          {isNotLastExample && <button onClick={this.nextExample} className="nextExam"> next example  ►</button>}
+        </p>
+        <div className="display">{display}
+          <div className="word menu">
+              <p><button className="butAll" onClick={this.showAll}>all</button></p>
+              <p className={this.state.showCls && 'active'}><button className="cls" onClick={this.toogleCls}>class</button></p>
+              <p className={this.state.showGrammar && 'active'}><button className="butGra" onClick={this.toogleGrammar}>grammar</button></p>
+              <p className={this.state.showFunction && 'active'}><button className="fun" onClick={this.toogleFunction}>function</button></p>
+              <p className={this.state.showMeaning && 'active'}><button className="gls" onClick={this.toogleMeaning}>meaning</button></p>
+              <p className={this.state.showTrans && 'active'}><button className="butTra" onClick={this.toogleTranslation}>translation</button></p>
+          </div>
+        </div>
+        <div className="translation">{translation}</div>
         <div className="nextprev">
           <p>
             {isNotFirtSentence && <button onClick={this.previous}>◀</button>}
             {isNotLastSentence && <button onClick={this.next}>►</button>}
-          </p>
-        </div>
-        <div className="translation">{translation}</div>
-        <div className="display">{display}
-          <div className="menu">
-            <ul>
-              <li><button onClick={this.toogleCls}>grammar</button></li>
-              <li><button onClick={this.toogleMeaning}>word meaning</button></li>
-              <li><button onClick={this.toogleTranslation}>show translation</button></li>
-              <li><button onClick={this.showAll}>all</button></li>
-            </ul>
-          </div>
-        </div>
-        <div className="nextprev">
-          <p>
-            {isNotLastExample && <button onClick={this.nextExample}> next example ►</button>}
           </p>
         </div>
       </div>

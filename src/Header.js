@@ -7,7 +7,6 @@ const Header = () => (
   <header>
     <nav>
       <ul>
-        <li><Link to='/'>Home</Link></li>
         <li><Link to='/spellchecker'>Spell checker</Link></li>
         <li><Link to='/grammar'>Tibetan Grammar</Link></li>
       </ul>

@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
 
-const URL = 'https://raw.githubusercontent.com/ShangShungFoundation/tib_learn_app/master/src/'
+const URL = 'https://shangshungfoundation.github.io/tib_learn_app/'
 
 const Tip = ({wy, dra, spel}) => 
 	<div className="tip">
 		<p className="wy">{wy}</p>
 		<p className="dra">{dra}</p>
+		{ (spel !== '' ) &&
 		<audio autoPlay>
-			<source src={spel} type="audio/mpeg" />
+			<source src={`${URL}assets/mp3/sylabes/${encodeURIComponent(spel)}`} type="audio/mpeg" />
 		</audio>
+		}
 	</div>
 
 
@@ -17,7 +19,7 @@ class Syllabe extends Component {
 	constructor(props) {
 		super(props);
 		this.props = props
-		this.spel = `${URL}assets/mp3/sylabes/${encodeURIComponent(props.spel)}`
+		this.spel = props.spel
 		this.state = {showTip: false}
 	}
 	toogleTip = () => {
@@ -25,12 +27,17 @@ class Syllabe extends Component {
 	}
 	render() {
 		const {tib, wy, dra} = this.props
-		return(
-			<div className="syll">
-				{this.state.showTip && <a onClick={this.toogleTip}><Tip wy={wy} dra={dra} spel={this.spel}/></a>}
-				<a onClick={this.toogleTip} className="tib">{tib}</a>
-			</div>
-		);
+		if (this.props.wy === undefined)
+			return(
+				<div className="syll"><a className="tib notFound">{tib}</a></div>
+			);
+		else
+			return(
+				<div className="syll">
+					{this.state.showTip && <a onClick={this.toogleTip}><Tip wy={wy} dra={dra} spel={this.spel}/></a>}
+					<a onClick={this.toogleTip} className="tib">{tib}</a>
+				</div>
+			);
 	}
 }
 
