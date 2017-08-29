@@ -3,7 +3,6 @@ import Find from './lib/Find.js'
 import Syllabe from './Syllabe.js'
 
 
-
 class tibText extends Component {
   constructor(props) {
     super(props);
@@ -17,7 +16,8 @@ class tibText extends Component {
   toSyllabes(text){
     let textWhiteSpaceArray = text.split(/[ ]+/g)
     let syllArray = textWhiteSpaceArray.map((w) => w.split('་').map((s, i) => this.renderSylabe(s, i)))
-    return syllArray.map((a, i) => [...a, <span>&nbsp;</span>])
+    let spacer = (this.props.spacer)? <span>&nbsp;</span> : [];
+    return syllArray.map((a, i) => [...a, spacer])
     // this.textArray = text.split('་')
     // return this.textArray.map((s, i) => this.renderSylabe(s, i))
   }
@@ -42,6 +42,7 @@ class tibText extends Component {
     return(
       <div className='tib'>
         {syllabes}
+        {this.props.wylie && <p className='wylie'>{wylie}</p>}
       </div>
     );
   }

@@ -2,7 +2,7 @@ import syllabes from '../syllabes.json'
 
 
 function strip(string) {
-	string = string.replace(/[༄༅།༼༽༈༾༿༴྾྾༑☸༎༔༔ ]*/g, '')
+	string = string.replace(/[༄༅།༼༽༈༾༿༴྾྾༑☸༎༔\- ]*/g, '')
 	if (!string.endsWith('་'))
 		string = `${string}་`
 	return string

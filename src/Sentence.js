@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
-import examples from './examples.json'
 import TibText from './TibText.js'
 
 
-const examplesURL = 'https://sheets.googleapis.com/v4/spreadsheets/1D6NW7phdjwmz7bnncNgJcwNVgwn39SsOCVvZ403VilE/values:batchGet?ranges=sentence2!A1:L17&ranges=sentence3!A1:Q24&ranges=sentence4!A1:N6&majorDimension=ROWS&key=AIzaSyCSZo1p3NxY73vcsDo554y3chNSTp4uhqY'
+const examplesURL = 'https://sheets.googleapis.com/v4/spreadsheets/1D6NW7phdjwmz7bnncNgJcwNVgwn39SsOCVvZ403VilE/values:batchGet?ranges=sentence2!A1:L17&ranges=sentence3!A1:Q24&ranges=sentence4!A1:N6&ranges=sentence5!A1:K12&ranges=sentence4!A1:S6&majorDimension=ROWS&key=AIzaSyCSZo1p3NxY73vcsDo554y3chNSTp4uhqY'
 
 
 function prepareData(json){
@@ -27,9 +26,6 @@ const TibWord = ({w1, w2}) =>
 
 
 class Sentence extends Component {
-  constructor(props) {
-    super(props);
-  }
   componentDidMount() {
       axios.get(examplesURL)
         .then(res => {
@@ -102,7 +98,7 @@ class Sentence extends Component {
     let fun = this.state.currSentence.function || []
     return fullSentence.map((s, i) => 
       <div className="word" key={i} >
-          <TibWord w1={s} w2={sentence[i]}/>
+          <TibWord w1={s} w2={sentence[i]} />
           <p className="cls">{this.state.showCls && cls[i] }</p>
           <p className="grm">{this.state.showGrammar && grammar[i] }</p>
           <p className="fun">{this.state.showFunction && fun[i] }</p>
@@ -111,7 +107,8 @@ class Sentence extends Component {
   }
   renderTranslation(){
     let trans = this.state.currSentence.translation[0]
-    if (!this.state.showTrans || trans === '') return ""
+    if (trans === undefined && !this.state.showTrans) 
+      return ""
     return trans.split('&&').map((s,i) => <p key={i}>{s.trim()}</p>)
   }
 
@@ -130,7 +127,8 @@ class Sentence extends Component {
         <p>
           {isNotLastExample && <button onClick={this.nextExample} className="nextExam"> next example  ►</button>}
         </p>
-        <div className="display">{display}
+        <div className="display">
+          {display}
           <div className="word menu">
               <p><button className="butAll" onClick={this.showAll}>all</button></p>
               <p className={this.state.showCls && 'active'}><button className="cls" onClick={this.toogleCls}>class</button></p>
@@ -140,7 +138,7 @@ class Sentence extends Component {
               <p className={this.state.showTrans && 'active'}><button className="butTra" onClick={this.toogleTranslation}>translation</button></p>
           </div>
         </div>
-        <div className="translation">{translation}</div>
+        {this.state.showTrans && <div className="translation">{translation}</div>}
         <div className="nextprev">
           <p>
             {isNotFirtSentence && <button onClick={this.previous}>◀</button>}
