@@ -25,7 +25,7 @@ class SpellChecker extends Component {
 					<input type="text" placeholder="Tib. text to spellcheck" onChange={this.doSpell} defaultValue={this.state.query} className="queryInput"/>
 				</p>
 
-				{isQuery && <TibText text={query} /> }
+				{isQuery && <TibText text={query} spacer wylie/> }
 			</div>
 		);
 	}
