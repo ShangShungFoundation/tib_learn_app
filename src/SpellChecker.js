@@ -10,7 +10,7 @@ class SpellChecker extends Component {
 		this.state = {query: query}
 	}
 	doSpell = (e) => {
-		e.preventDefault();
+		//e.preventDefault();
     	this.setState({query: e.currentTarget.value})
 
 	}
@@ -22,7 +22,7 @@ class SpellChecker extends Component {
 				<h2>Tibetan spell check</h2>
 				<p className="info">Copy/Paste line of tibetan text into the box below</p>
 				<p className="query">
-					<input type="text" placeholder="Tib. text to spellcheck" onKeyPress={this.doSpell} defaultValue={query} className="queryInput"/>
+					<input type="text" placeholder="Tib. text to spellcheck" onChange={this.doSpell} defaultValue={this.state.query} className="queryInput"/>
 				</p>
 
 				{isQuery && <TibText text={query} /> }

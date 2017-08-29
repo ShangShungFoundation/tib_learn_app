@@ -5,7 +5,7 @@ import examples from './examples.json'
 import TibText from './TibText.js'
 
 
-const examplesURL = 'https://sheets.googleapis.com/v4/spreadsheets/1D6NW7phdjwmz7bnncNgJcwNVgwn39SsOCVvZ403VilE/values:batchGet?ranges=sentence2!A1:L17&ranges=sentence3!A1:Q24&majorDimension=ROWS&key=AIzaSyCSZo1p3NxY73vcsDo554y3chNSTp4uhqY'
+const examplesURL = 'https://sheets.googleapis.com/v4/spreadsheets/1D6NW7phdjwmz7bnncNgJcwNVgwn39SsOCVvZ403VilE/values:batchGet?ranges=sentence2!A1:L17&ranges=sentence3!A1:Q24&ranges=sentence4!A1:N6&majorDimension=ROWS&key=AIzaSyCSZo1p3NxY73vcsDo554y3chNSTp4uhqY'
 
 
 function prepareData(json){
@@ -117,7 +117,7 @@ class Sentence extends Component {
 
   render() {
     if (!this.state) {
-        return <p className="loading">Loading</p>
+        return <p className="loading">Loading Examples...</p>
     }
     const display = this.renderSentence()
     const translation = this.renderTranslation()

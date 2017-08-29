@@ -26,15 +26,7 @@ ul{
   margin-left:1px;
   padding-bottom: 10px;
 }
-.cls {
-  font-size: 15px;
-  font-style: italic;
-  color: #b1aeae;
-}
-.gls {
-  font-size: 18px;
-  font-weight: normal;
-}
+
 .word {
     display:inline-grid;
     background: rgba(132, 62, 73, 0.5);
@@ -50,12 +42,22 @@ ul{
     margin: 0;
     font-size: 15px;
 }
-p.grm, p.fun {
+p.grm, p.fun, .cls {
   font-size: 12px;
   font-style:normal;
+  display: block;
+  height: 18px;
+}
+.cls {
+  font-style: italic;
+  color: #ceb895;
+}
+.gls {
+  font-size: 18px;
+  font-weight: normal;
 }
 .dimm {
-  color: #a09b9d;
+  color: #bfb2a1;
 }
 
 .word button {
@@ -181,4 +183,12 @@ footer{
 .active {
   background: #b54e4e;
   color: white;
+}
+.notFound {
+  color: #f58e01;
+}
+.search .tip {
+  margin-top: -110px;
+  height:110px;
+  padding:0;
 }
