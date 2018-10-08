@@ -2,6 +2,9 @@
   font-family: 'Jomolhari';
   src: url('Jomolhari-alpha3c-0605331.ttf') format('truetype');
 }
+/* a {
+  color: #b54e4e
+} */
 button:focus {outline:0;}
 .App {
   text-align: center;
@@ -11,7 +14,7 @@ ul{
 }
 .tib {
   font-size: 50px;
-  font-face: 'Jomolhari', sans-serif;
+  font-family: 'Jomolhari', sans-serif;
   font-style:normal;
   text-shadow: 1px 1px 3px #000000; 
   cursor: pointer;

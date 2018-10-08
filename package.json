@@ -4,10 +4,8 @@
   "private": true,
   "homepage": "https://shangshungfoundation.github.io/tib_learn_app",
   "dependencies": {
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.10"
+    "axios": "^0.18.0",
+    "react-router-dom": "^4.2.2"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -16,5 +14,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-scripts": "1.0.10"
   }
 }

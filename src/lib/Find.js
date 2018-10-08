@@ -1,4 +1,4 @@
-import syllabes from '../syllabes.json'
+
 
 
 function strip(string) {
@@ -9,7 +9,7 @@ function strip(string) {
 }
 
 
-const Find = (string, isWylie) => {
+const Find = (syllabes, string, isWylie) => {
 	let clean = (isWylie)? string : strip(string);
 	let rows = syllabes.values;
 	for(var row in rows){
