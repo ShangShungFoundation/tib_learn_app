@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'NotoSansTibetan';
+  src: url('NotoSansTibetan-Regular') format('truetype');
+}
+.tib {
+  font-family: 'NotoSansTibetan', sans-serif;
+  font-style:normal;
+  /* text-shadow: 1px 1px 3px #000000;  */
+  cursor: pointer;
+}
+.syll {
+  display:inline-block;
+  background: rgba(2, 2, 2, 0.068);
+  border-radius: 5px;
+  margin-left:1px;
+  padding-bottom: 10px;
+}
+.syllabes a{
+  font-size: 50px;
+  font-style:normal;
+  color: #f7e8a9;
+  /* text-shadow: 1px 1px 3px #000000; */
+  text-decoration: none;
+}
+.tip {
+    position: absolute;
+    background: #eae8e8;
+    color: #000;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1em;
+    margin-top: -9em;
+    /* text-shadow: 1px 1px 1px #ffffff; */
+}
+.tip p{
+    padding: 8px;
+}
+.tip:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-width: 10px;
+      border-style: solid;
+      border-color: #eae8e8 transparent transparent transparent;
+      left: 20px;
+}
+.wy {
+  font-style: italic;
+}
