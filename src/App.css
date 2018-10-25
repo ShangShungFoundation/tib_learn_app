@@ -18,6 +18,7 @@ ul{
   font-style:normal;
   text-shadow: 1px 1px 3px #000000; 
   cursor: pointer;
+  text-decoration: none
 }
 .highlight {
   color: #f7e8a9;
@@ -202,4 +203,25 @@ footer{
 .wylie {
   font-size: 20px;
   font-style: italic;
+}
+
+.colorChooser {
+  width: 2em;
+  height: 2em;
+  display: inline-block;
+}
+
+.code {
+  width: 50em !important;
+}
+
+.exportBtn {
+  font-size: 20px;
+  color: white;
+}
+
+.sketch-picker {
+  position: absolute;
+  margin-left: 60%;
+  z-index: 100;
 }

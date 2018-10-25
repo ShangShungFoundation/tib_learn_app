@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 import Home from './Home'
 import Sentence from './Sentence'
 import SpellChecker from './SpellChecker'
+import ExportWidget from './ExportWidget'
 
 // The Main component renders one of the three provided
 // Routes (provided that one matches). Both the /roster
@@ -15,6 +16,9 @@ const Main = () => (
       <Route exact path='/' component={Home}/>
       <Route path='/spellchecker' component={SpellChecker}/>
       <Route path='/grammar' component={Sentence}/>
+      <Route path='/widget' //component={ExportWidget}
+        render={(props) => <ExportWidget {...props} />}
+        />
     </Switch>
   </main>
 )

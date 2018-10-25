@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Find from './Find.js'
 import Syllabe from './Syllabe.js'
-
+import { Link } from 'react-router-dom'
 
 class tibText extends Component {
   constructor(props) {
@@ -9,7 +9,7 @@ class tibText extends Component {
     this.textArray = []
     this.wylieArray = []
     this.isWylie = false  //this.isLatin(props.text)
-    this.foundSylabes = []
+    this.foundSylabes = {}
     this.syllabes = props.syllabes
     // debugger
   }
@@ -27,27 +27,30 @@ class tibText extends Component {
     let tib = ''
     if (s === '')
       return ''
-    var find = Find(this.syllabes, s, this.isWylie)
-    this.foundSylabes.push(find);
+    var syl = Find(this.syllabes, s, this.isWylie)
+    if (syl) this.foundSylabes[syl.tib] = syl
     if (!this.isWylie) {
-      this.wylieArray.push(find.wy || s)
+      this.wylieArray.push(syl.wy || s)
       tib = s.endsWith('།')? s : `${s}་`;
     } else {
-      tib = find.tib
+      tib = syl.tib
     }
-    return (<Syllabe tib={tib} key={i} wy={find.wy} dra={find.dra} spel={find.spel} />)
+    return (<Syllabe tib={tib} key={i} wy={syl.wy} dra={syl.dra} spel={syl.spel} />)
   }
 
   render() {
     const syllabes = this.toSyllabes(this.props.text)
     const wylie = this.wylieArray.join(' ')
-    const foundSylabes = this.foundSylabes.toString()
-    console.log(foundSylabes)
+    const foundSylabes = JSON.stringify(this.foundSylabes, null, 0)
+    // const querStr = "?txt=" + this.props.text + "&syl=" + foundSylabes
+    
     return(
       <div className='tib'>
         {syllabes}
         {this.props.wylie && <p className='wylie'>{wylie}</p>}
-        {/* <h1>{foundSylabes}</h1> */}
+        <p>
+          <Link className="exportBtn" to={{pathname: '/widget', query: {text: this.props.text, syllabes: foundSylabes} }}>Export to Widget</Link>
+        </p>
       </div>
     );
   }
