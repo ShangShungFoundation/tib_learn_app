@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import TibText from '../lib/TibText.js'
 
-
+const URL = 'https://sheets.googleapis.com/v4/spreadsheets/1D6NW7phdjwmz7bnncNgJcwNVgwn39SsOCVvZ403VilE/values/syllables_unique!A2:D4045?key=AIzaSyCSZo1p3NxY73vcsDo554y3chNSTp4uhqY'
 const examplesURL = 'https://sheets.googleapis.com/v4/spreadsheets/1D6NW7phdjwmz7bnncNgJcwNVgwn39SsOCVvZ403VilE/values:batchGet?ranges=sentence2!A1:L17&ranges=sentence3!A1:Q24&ranges=sentence4!A1:N6&ranges=sentence5!A1:K12&ranges=sentence4!A1:S6&majorDimension=ROWS&key=AIzaSyCSZo1p3NxY73vcsDo554y3chNSTp4uhqY'
 
 
@@ -18,20 +17,36 @@ function prepareData(json){
 }
 
 
-const TibWord = ({w1, w2}) =>
+const TibWord = ({w1, w2, syllabes}) =>
   <div className={(w2 === '' || w2 === undefined)?'dimm':'highlight'}>
-    <TibText text={w1} />
+    <TibText text={w1} syllabes={syllabes} />
   </div>
 
 
 class Sentence extends Component {
+  constructor(props){
+    super(props)
+    this.state = {loadedExmaples: false, loadedSyllabes: false}
+    this.syllabes = {}
+  }
+  
+
   componentDidMount() {
-      axios.get(examplesURL)
-        .then(res => {
-          this.examples = res.data.valueRanges;
-          this.exampleQty = this.examples.length
-          this.setState(this.initExample(0))
-      });
+      Promise.all([
+        fetch(examplesURL)
+          .then((response) => response.json())
+          .then(res => {
+            this.examples = res.valueRanges;
+            this.exampleQty = this.examples.length
+          })
+          .catch((error) => console.log('error', error)),
+        fetch(URL)
+          .then((response) => response.json())
+          .then((json) =>  this.syllabes = json)
+          .catch((error) => console.log('error', error))
+      ]).then((e) =>{
+        this.setState(this.initExample(0))
+      })
   }
   initExample(exampleNum) {
     this.example = prepareData(this.examples[exampleNum].values)
@@ -89,7 +104,7 @@ class Sentence extends Component {
     this.setState(this.initExample(nextExampleNum))
   }
   prevExample = () => {
-    let nextExampleNum = this.state.currExampleNum + -1
+    let nextExampleNum = this.state.currExampleNum -1
     this.setState(this.initExample(nextExampleNum))
   }
 
@@ -101,31 +116,34 @@ class Sentence extends Component {
     let fun = this.state.currSentence.function || []
     return fullSentence.map((s, i) => 
       <div className="word" key={i} >
-          <TibWord w1={s} w2={sentence[i]} />
+          <TibWord w1={s} w2={sentence[i]} syllabes={this.syllabes} />
           <p className="cls">{this.state.showCls && cls[i] }</p>
           <p className="grm">{this.state.showGrammar && grammar[i] }</p>
           <p className="fun">{this.state.showFunction && fun[i] }</p>
           <p className="gls">{this.state.showMeaning && meaning[i] }</p>
       </div>)
   }
+  
   renderTranslation(){
-    let trans = this.state.currSentence.translation[0]
-    if (trans === undefined && !this.state.showTrans) 
-      return ""
-    return trans.split('&&').map((s,i) => <p key={i}>{s.trim()}</p>)
+    if (this.state.showTrans && 'translation' in this.state.currSentence) {
+      let trans = this.state.currSentence.translation[0]
+      return trans.split('&&').map((s,i) => <p key={i}>{s.trim()}</p>)
+    } else {
+      return ''
+    } 
   }
 
   render() {
     if (!this.state) {
         return <p className="loading">Loading Examples...</p>
     }
-    const display = this.renderSentence()
+    const sentance = this.state.currExampleNum && this.renderSentence()
     const translation = this.renderTranslation()
     const isNotFirtSentence = (this.state.currSentenceNum === 0)? false : true;
     const isNotLastSentence = (this.state.currSentenceNum === this.sentenceQty - 1 )? false: true;
     const isNotFirstExample = (this.state.currExampleNum === 0)? false: true;
     const isNotLastExample = (this.state.currExampleNum === this.exampleQty - 1 )? false: true;
-
+    
     return (
       <div className="sentence">
         <p>
@@ -133,7 +151,7 @@ class Sentence extends Component {
           {isNotLastExample && <button onClick={this.nextExample} className="nextExam"> next example  ►</button>}
         </p>
         <div className="display">
-          {display}
+          {sentance}
           <div className="word menu">
               <p><button className="butAll" onClick={this.showAll}>all</button></p>
               <p className={this.state.showCls && 'active'}><button className="cls" onClick={this.toogleCls}>class</button></p>

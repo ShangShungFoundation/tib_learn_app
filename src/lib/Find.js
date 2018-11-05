@@ -16,7 +16,7 @@ const Find = (syllabes, string, isWylie) => {
 		if (rows[row][isWylie * 1] === clean) {
 			let res = rows[row]
 			let tib = (isWylie)? res[0] : string
-			return {tib: tib, wy: res[1], spel: res[2], dra: res[3], clean: clean}
+			return {tib: tib, wy: res[1], spel: res[3], dra: res[2], clean: clean}
 		}
 	}
 	return false

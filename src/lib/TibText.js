@@ -11,6 +11,7 @@ class tibText extends Component {
     this.isWylie = false  //this.isLatin(props.text)
     this.foundSylabes = {}
     this.syllabes = props.syllabes
+    this.showExport = props.showExport || false
     // debugger
   }
   isLatin(text) {
@@ -42,15 +43,16 @@ class tibText extends Component {
     const syllabes = this.toSyllabes(this.props.text)
     const wylie = this.wylieArray.join(' ')
     const foundSylabes = JSON.stringify(this.foundSylabes, null, 0)
+    const showExport = this.showExport
     // const querStr = "?txt=" + this.props.text + "&syl=" + foundSylabes
     
     return(
       <div className='tib'>
         {syllabes}
         {this.props.wylie && <p className='wylie'>{wylie}</p>}
-        <p>
+        { showExport && <p>
           <Link className="exportBtn" to={{pathname: '/widget', query: {text: this.props.text, syllabes: foundSylabes} }}>Export to Widget</Link>
-        </p>
+        </p>}
       </div>
     );
   }
